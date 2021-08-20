@@ -1,0 +1,21 @@
+.page__header{
+    margin: 0 auto 41px;
+    padding-bottom: 36.25px;
+}
+
+@media screen and (max-width: 640px) {
+    .page__header {
+        margin-bottom: 42px;
+        padding-bottom: 31.6px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .page__header {
+        margin-bottom: 42px;
+        padding-bottom: 31.6px;
+        padding-left: 8px;
+    }
+}
+
+

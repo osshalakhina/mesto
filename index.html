@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./pages/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Проект 'Mesto' Ольги Шалахиной на Яндекс Практикуме">
+    <meta name="keywords" content="html, css, javascript">
+    <meta name="author" content="Ольга Шалахина">
+    <title>Mesto</title>
+  </head>
+
+<body class="page">
+    <div class="page__container">
+        <header class="header page__header section">
+            <a href="#" class="logo logo__header">
+                <img class="logo__image" src="./images/logo__image.svg" alt="Логотип">
+            </a>
+        </header>
+        <main class="content section">
+            <section class="profile section">
+                <div class="profile__image"></div>
+                <div class="profile__info">
+                    <div class="profile__name-wrap">
+                        <div>
+                            <span class="profile__name">Жак-Ив Кусто</span>
+                            <span class="profile__name">
+                                <button class="profile__edit-button" data-popup-trigger="popup_type_edit-profile"></button>
+                            </span>
+                        </div>
+                        <p class="profile__job" name=''>Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="profile__add-button" data-popup-trigger="popup_type_add-place"></button>
+            </section>
+            </main>
+
+            <section class="section">
+                <ul class="places__list">
+                    <li class="place">
+                        <img src="./images/building.png" alt="Карачаевск">
+                        <h2 class="place__text">
+                            <span>Карачаевск</span>
+                            <span>
+                                <button class="place_like-button_container place__like-button"></button>
+                            </span>
+                        </h2>
+                    </li>
+                    <li class="place">
+                        <img src="./images/mountains.png" alt="Гора Эльбрус">
+                        <h2 class="place__text">
+                            <span>Гора Эльбрус</span>
+                            <span>
+                                <button class="place_like-button_container place__like-button"></button>
+                            </span>
+                        </h2>
+                    </li>
+                    <li class="place">
+                        <img src="./images/nature.png" alt="Домбай">
+                        <h2 class="place__text">
+                            <span>Домбай</span>
+                            <span>
+                                <button class="place_like-button_container place__like-button"></button>
+                            </span>
+                        </h2>
+                    </li>
+                    <li class="place">
+                        <img src="./images/mountains.png" alt="Гора Эльбрус">
+                        <h2 class="place__text">
+                            <span>Гора Эльбрус</span>
+                            <span>
+                                <button class="place_like-button_container place__like-button"></button>
+                            </span>
+                        </h2>
+                    </li>
+                    <li class="place">
+                        <img src="./images/nature.png" alt="Домбай">
+                        <h2 class="place__text">
+                            <span>Домбай</span>
+                            <span>
+                                <button class="place_like-button_container place__like-button"></button>
+                            </span>
+                        </h2>
+                    </li>
+                    <li class="place">
+                        <img src="./images/building.png" alt="Карачаевск">
+                        <h2 class="place__text">
+                            <span>Карачаевск</span>
+                            <span>
+                                <button class="place_like-button_container place__like-button"></button>
+                            </span>
+                        </h2>
+                    </li>
+                </ul>
+                </section>
+
+            <footer class="footer section">
+                <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+            </footer>
+
+<div class="popup">
+    <div class="popup__content">
+        <button type="button" class="popup__close-button">&times</button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__form">
+            <div class="popup__block">
+                <input type="text" class='popup__text' name='name' placeholder="Жак-Ив Кусто" value="Жак-Ив Кусто">
+                <input type="text" class='popup__text' name='job' placeholder="Исследователь океана" value="Исследователь океана">
+            </div>
+            <button type="submit" class="popup__save-button">Сохранить</button>
+        </form>
+    </div>
+           <script src="./pages/index.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

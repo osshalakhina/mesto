@@ -1,0 +1,10 @@
+.profile__name-wrap {
+    align-items: baseline;
+    width: 100%;
+    max-width: 100%;
+}
+@media screen and (max-width: 900px) {
+    .profile__name-wrap {
+        justify-content: center;
+    }
+}
