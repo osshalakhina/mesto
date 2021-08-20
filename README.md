@@ -15,13 +15,11 @@
 * Nested BEM
 * Git
 
-**Figma**
+### Figma
 
 * [https://www.figma.com](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
-**Оптимизация картинок:**
-
-[https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
+Оптимизация картинок выполнена через [https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
 
 ### Ссылка на проект: 
 
