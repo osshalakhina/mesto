@@ -7,10 +7,11 @@
 
 ### Спринт 4, реализовано:
 
-Вёрстка:
+### Вёрстка:
 * добавлен попап редактирования профиля
 * предусмотренно переполнение содержимого в блоке
-JavaScript:
+
+### JavaScript:
 * реализованно открытие и закрытие попапа
 * поля формы заполненны значениями, которые отображаются на странице
 * реализованно редактирование имени и информации о себе
@@ -43,11 +44,11 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 
 ### Sprint 4, implemented:
 
-Layout:
+### Layout:
 * added profile editing popup
 * overflow of content in the block is provided
 
-JavaScript:
+### JavaScript:
 * popup opening and closing implemented
 * form fields are filled with values that are displayed on the page
 * implemented editing of the name and information about yourself
