@@ -5,7 +5,7 @@
 
 Сервис Mesto: интерактивная страница, где можно обмениваться фотографиями и ставить лайки, изменять данные.
 
-### Спринт 4:
+# Спринт 4:
 
 ### Вёрстка:
 * добавлен попап редактирования профиля
@@ -41,7 +41,7 @@
 
 Mesto service: an interactive page where you can exchange photos and put likes, change data.
 
-### Sprint 4:
+# Sprint 4:
 
 ### Layout:
 * added profile editing popup
