@@ -56,3 +56,5 @@ for (let btn of activeLikeButtons) {
         btn.classList.toggle('place__like-button_active');
     });
 };
+
+

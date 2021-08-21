@@ -5,7 +5,7 @@
     border: none;
     min-height: 19px;
     min-width: 22px;
-    background-color: white;
+    background-color:transparent;
     background-size: 22px 19px;
 }
 
@@ -13,3 +13,4 @@
     cursor: pointer;
     opacity: 0.6;
 }
+
