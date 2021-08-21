@@ -27,7 +27,7 @@
 
 ### Figma
 
-* Макет для спринта 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [Макет для спринта 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
 Оптимизация картинок выполнена через [https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
 
@@ -64,7 +64,7 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 
 ### Figma
 
-* For sprint 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [For sprint 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
 Optimization of images was done through [https://tinypng.com/](https://tinypng.com/).
 
