@@ -70,7 +70,7 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 
 Optimization of images was done through [https://tinypng.com/](https://tinypng.com/).
 
-Code validation verifid with [https://validator.w3.org/](https://validator.w3.org/).
+Code validation verified with [https://validator.w3.org/](https://validator.w3.org/).
 
 ### Link on project: 
 
