@@ -13,8 +13,8 @@
 <body class="page">
     <div class="page__container">
         <header class="header page__header section">
-            <a href="#" class="logo logo__image">
-                <img src="./images/logo__image.svg" alt="Логотип">
+            <a href="#" class="logo logo__header">
+                <img class="logo logo__image" src="./images/logo__image.svg" alt="Логотип">
             </a>
         </header>
         <main class="content section">
@@ -27,7 +27,7 @@
                                 <button class="profile__edit-button" type="button"></button>
                             </h1>
                         </div>
-                        <p class="profile__job" name=''>Исследователь океана</p>
+                        <p class="profile__job">Исследователь океана</p>
                     </div>
                 </div>
                 <button class="profile__add-button" type="button"></button>
@@ -86,8 +86,8 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="bio">
                 <fieldset class="popup__block">
-                    <input type="text" class='popup__text' name='name' autofocus value="" id="nameInput" placeholder="Жак-Ив Кусто" value="Жак-Ив Кусто">
-                    <input type="text" class='popup__text' name='job' autofocus value="" id="jobInput" placeholder="Исследователь океана" value="Исследователь океана">
+                    <input type="text" class='popup__text' name='name' id="nameInput" autofocus value="" placeholder="Жак-Ив Кусто">
+                    <input type="text" class='popup__text' name='job' id="jobInput" placeholder="Исследователь океана">
                 </fieldset>
                 <button type="submit" class="popup__save-button">Сохранить</button>
             </form>
