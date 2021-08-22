@@ -3,7 +3,6 @@
     flex-direction: column;
     position: relative;
     max-width: 433px;
-    width: 100%;
     row-gap: 16px;
 }
 
@@ -12,5 +11,3 @@
         align-items: center;
     }
 }
-
-
