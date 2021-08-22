@@ -4,15 +4,14 @@
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
-    margin-bottom: 17px;
-    min-height: 30px;
+    margin-bottom: 30px;
 }
 
 .popup__text::placeholder {
     color:#000000;
 }
 .popup__text:focus {
-    outline: 3px solid #6596f9;
+    outline: none;
 }
 
 @media screen and (max-width: 370px) {

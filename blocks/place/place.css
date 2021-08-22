@@ -7,7 +7,6 @@
     box-sizing: border-box;
     position: relative;
     background-color: white;
-    min-height: 361px;
     min-width: 282px;
     color: #000000;
 }

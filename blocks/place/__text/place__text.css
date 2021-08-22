@@ -1,8 +1,10 @@
-.place__text{
+ .place__text{
+    display: grid;
+    grid-template-columns: 219px 22px;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 900;
     margin-left: 21px;
     margin-top: 25px;
-}
+ }
