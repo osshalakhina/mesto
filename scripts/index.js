@@ -9,8 +9,8 @@ let profileJobInput = document.querySelector('.popup__form input[name="job"]');
 
 function togglePopup() {
     if (!popup.classList.contains('popup_is-opened')){
-        profileName.textContent = openPopupButton.textContent;
-        profileName.value = openPopupButton.textContent;
+        profileName.textContent = profileNameInput.value;
+        profileJob.textContent = profileJobInput.value;
     }
 
     popup.classList.toggle('popup_is-opened');
