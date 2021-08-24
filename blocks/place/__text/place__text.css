@@ -1,6 +1,4 @@
  .place__text{
-    display: grid;
-    grid-template-columns: 219px 22px;
     font-family: 'Inter', Arial, sans-serif;
     font-size: 24px;
     font-style: normal;
@@ -8,4 +6,9 @@
     margin-left: 21px;
     margin-top: 25px;
     line-height: 29px;
+    max-width: 224px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    
  }
