@@ -5,6 +5,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
     margin-bottom: 30px;
+    padding: 0 0 13px 0;
 }
 
 .popup__text::placeholder {
@@ -14,8 +15,3 @@
     outline: none;
 }
 
-@media screen and (max-width: 370px) {
-    .popup__text {
-        margin-bottom: 46px;
-    }
-}

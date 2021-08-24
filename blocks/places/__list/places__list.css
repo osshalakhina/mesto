@@ -7,11 +7,19 @@
     list-style: none;
     grid-auto-rows: 361px;
     justify-content: center;
-
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 916px) {
   .places__list {
+    grid-template-columns: 282px 282px;
+    grid-gap: 20px;
+    padding: 0 19px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .places__list {
+    grid-template-columns: 282px;
     grid-gap: 20px;
     padding: 0 19px;
   }

@@ -5,13 +5,11 @@
     align-items: center;
     flex-shrink: 0;
     padding-bottom: 40.6px;
-    border-bottom: 1px solid rgba(54, 54, 54, 0.7);
-  
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 916px) {
     .header {
-        margin: 0;
-        
+        margin: 0; 
     }
 }

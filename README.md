@@ -31,6 +31,8 @@
 
 Оптимизация картинок выполнена через [https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
 
+Валидация кода [https://validator.w3.org/](https://validator.w3.org/).
+
 ### Ссылка на проект: 
 
 [https://osshalakhina.github.io/mesto/](https://osshalakhina.github.io/mesto/)
@@ -67,6 +69,8 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 * [For sprint 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
 Optimization of images was done through [https://tinypng.com/](https://tinypng.com/).
+
+Code validation verified with [https://validator.w3.org/](https://validator.w3.org/).
 
 ### Link on project: 
 
