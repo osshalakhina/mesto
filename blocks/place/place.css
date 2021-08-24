@@ -1,7 +1,10 @@
 .place {
     font-family: 'Inter', Arial, sans-serif;
-    display: grid;
-    flex-direction: column;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
     margin: 0;
     border-radius: 10px;
     box-sizing: border-box;
