@@ -33,6 +33,8 @@
 
 Валидация кода [https://validator.w3.org/](https://validator.w3.org/).
 
+Конверткр цветов [https://colorscheme.ru](https://colorscheme.ru/color-converter.html)
+
 ### Ссылка на проект: 
 
 [https://osshalakhina.github.io/mesto/](https://osshalakhina.github.io/mesto/)
@@ -71,6 +73,8 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 Optimization of images was done through [https://tinypng.com/](https://tinypng.com/).
 
 Code validation verified with [https://validator.w3.org/](https://validator.w3.org/).
+
+Color converter [https://colorscheme.ru](https://colorscheme.ru/color-converter.html)
 
 ### Link on project: 
 
