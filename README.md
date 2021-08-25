@@ -33,7 +33,7 @@
 
 Валидация кода [https://validator.w3.org/](https://validator.w3.org/).
 
-Конверткр цветов [https://colorscheme.ru](https://colorscheme.ru/color-converter.html)
+Конвертер цветов [https://colorscheme.ru](https://colorscheme.ru/color-converter.html)
 
 ### Ссылка на проект: 
 
