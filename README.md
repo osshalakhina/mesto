@@ -1,5 +1,5 @@
 ------
-# Проект 4: Место
+# Проект 4: Место (спринт 4-5)
 
 ### О проекте:
 
@@ -16,6 +16,15 @@
 * поля формы заполненны значениями, которые отображаются на странице
 * реализованно редактирование имени и информации о себе
 
+### Спринт 5, реализовано:
+
+### JavaScript:
+* реализованно отображение 6 карточек с картинкой и подписью
+* добавление карточки
+* удаление карточки
+* лайк карточки
+* увеличение карточки для просмотра
+
 ### Технологии: 
 
 * HTML
@@ -28,6 +37,7 @@
 ### Figma
 
 * [Макет для спринта 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* * [Макет для спринта 5](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
 
 Оптимизация картинок выполнена через [https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
 
@@ -57,6 +67,15 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 * form fields are filled with values that are displayed on the page
 * implemented editing of the name and information about yourself
 
+### Sprint 5, implemented:
+
+### JavaScript:
+* implemented display of 6 cards with a picture and description to picture
+* adding a card
+* delete card
+* like cards
+* enlargement of the card for viewing
+
 ### Tehnology: 
 
 * HTML
@@ -69,6 +88,7 @@ Mesto service: an interactive page where you can exchange photos and put likes, 
 ### Figma
 
 * [For sprint 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [For sprint 5](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
 
 Optimization of images was done through [https://tinypng.com/](https://tinypng.com/).
 
