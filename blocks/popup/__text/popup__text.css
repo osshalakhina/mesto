@@ -8,9 +8,6 @@
     padding: 0 0 9px 0;
 }
 
-.popup__text::placeholder {
-    color:#000000;
-}
 .popup__text:focus {
     outline: none;
 }
