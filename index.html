@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-  <head>
-    <meta charset="UTF-8"> 
-    <link rel="stylesheet" href="./pages/index.css"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Проект 'Mesto' Ольги Шалахиной на Яндекс Практикуме">
-    <meta name="keywords" content="html, css, javascript">
-    <meta name="author" content="Ольга Шалахина">
-    <title>Mesto</title>
-  </head> 
-
-  <body class="page">
-    <div class="page__container">
-      <header class="header page__header section">
-        <a href="#"><img class="logo" src="./images/logo__image.svg" alt="Логотип"></a>
-      </header>
-      <main class="content section">
-        <section class="profile section">
-          <div class="profile__image"></div>
-            <div class="profile__name-wrap">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button" type="button"></button>
-              <p class="profile__job">Исследователь океана</p>
-            </div>
-          <button class="profile__add-button" type="button"></button>
-        </section>
-        <section class="places section">
-          <ul class="places__list"> 
-            <li class="place">
-              <img src="./images/building.png" alt="Карачаевск">
-              <h2 class="place__text">Карачаевск</h2>
-              <button class="place__like-button" type="button"></button>
-            </li>
-            <li class="place">
-              <img src="./images/mountains.png" alt="Гора Эльбрус">
-              <h2 class="place__text">Гора Эльбруc</h2>
-              <button class="place__like-button" type="button"></button>
-            </li>
-            <li class="place">
-              <img src="./images/nature.png" alt="Домбай">
-              <h2 class="place__text">Домбай</h2>
-              <button class="place__like-button" type="button"></button>
-            </li>
-            <li class="place">
-              <img src="./images/mountains.png" alt="Гора Эльбрус">
-              <h2 class="place__text">Гора Эльбрус</h2>
-              <button class="place__like-button" type="button"></button>
-            </li>
-            <li class="place">
-              <img src="./images/nature.png" alt="Домбай">
-              <h2 class="place__text">Домбай</h2>
-              <button class="place__like-button" type="button"></button>
-            </li>
-            <li class="place">
-              <img src="./images/building.png" alt="Карачаевск">
-              <h2 class="place__text">Карачаевск</h2>
-              <button class="place__like-button" type="button"></button>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="footer section">
-        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
-      </footer>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./pages/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Проект 'Mesto' Ольги Шалахиной на Яндекс Практикуме">
+  <meta name="keywords" content="html, css, javascript">
+  <meta name="author" content="Ольга Шалахина">
+  <title>Mesto</title>
+</head>
+<body class="page">
+<div class="page__container">
+  <header class="header page__header section">
+    <a href="#"><img class="logo" src="./images/logo__image.svg" alt="Логотип"></a>
+  </header>
+  <main class="content section">
+    <section class="profile section">
+      <div class="profile__image"></div>
+      <div class="profile__name-wrap">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <button class="profile__edit-button popup__open" type="button"></button>
+        <p class="profile__job">Исследователь океана</p>
+      </div>
+      <button class="profile__add-button popup__open" type="button"></button>
+    </section>
+    <section class="places section">
+      <ul class="places__list">
+      </ul>
+    </section>
+  </main>
+  <footer class="footer section">
+    <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+  </footer>
+</div>
+<div class="popup popup_type_edit-profile">
+  <div class="popup__content">
+    <button type="button" class="popup__close-button"></button>
+    <h2 class="popup__title">Редактировать профиль</h2>
+    <form class="popup__form" name="bio">
+      <fieldset class="popup__block">
+        <input type="text" class='popup__text' name='name' id="nameInput" autofocus value="Жак-Ив Кусто"
+               placeholder="Жак-Ив Кусто">
+        <input type="text" class='popup__text' name='job' id="jobInput" value="Исследователь океана"
+               placeholder="Исследователь океана">
+      </fieldset>
+      <button type="submit" class="popup__save-button">Сохранить</button>
+    </form>
+  </div>
+</div>
+<div class="popup popup_type_add-card">
+  <div class="popup__content">
+    <button type="button" class="popup__close-button"></button>
+    <h2 class="popup__title">Новое место</h2>
+    <form class="popup__form" name="bio">
+      <fieldset class="popup__block">
+        <input type="text" class='popup__text popup__input-title' name='typePlace' id="typePlace" autofocus value=""
+               placeholder="Название">
+        <input type="text" class='popup__text popup__input-link' name='typeUrl' id="typeUrl" value=""
+               placeholder="Ссылка на картинку">
+      </fieldset>
+      <button type="submit" class="popup__save-button">Сохранить</button>
+    </form>
+  </div>
+</div>
+<div class="popup popup_image">
+  <div class="popup__content-image">
+    <button type="button" class="popup__close-button"></button>
+    <figure>
+      <img src="#" alt="" class="popup__input-link">
+      <figcaption class="popup__text">Картинка</figcaption>
+    </figure>
+  </div>
+</div>
+<template class="template-card">
+  <li class="place">
+    <img class="place__image" src="" alt="Картинка">
+    <div class="place__description">
+      <h2 class="place__text"></h2>
     </div>
-    <div class="popup">
-    <div class="popup__content">
-      <button type="button" class="popup__close-button"></button>
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form" name="bio">
-        <fieldset class="popup__block">
-          <input type="text" class='popup__text' name='name' id="nameInput" autofocus value="Жак-Ив Кусто" placeholder="Жак-Ив Кусто">
-          <input type="text" class='popup__text' name='job' id="jobInput" value="Исследователь океана" placeholder="Исследователь океана">
-        </fieldset>
-        <button type="submit" class="popup__save-button">Сохранить</button>
-      </form>
-    </div>
-    </div>
-    <script src="./scripts/index.js"></script>
-  </body>
+    <button class="place__delete-button" type="button"></button>
+    <button class="place__like-button" type="button"></button>
+  </li>
+</template>
+<script src="./scripts/index.js"></script>
+</body>
 </html>
 
 

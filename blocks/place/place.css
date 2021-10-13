@@ -1,3 +1,4 @@
+
 .place {
     font-family: 'Inter', Arial, sans-serif;
     display: flex;
@@ -11,5 +12,6 @@
     background-color: white;
     min-width: 282px;
     color: #000000;
+    overflow: hidden;
 }
 
