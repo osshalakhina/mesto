@@ -15,7 +15,7 @@ const imgPopup = document.querySelector('.popup_image');
 const titlePopup = popupImgView.querySelector('.popup__text');
 const initialCardsElements = document.querySelector('.places__list');
 const templateCard = document.querySelector('.template-card');
-const popupActiveClass = 'popup_is-opened';
+const popupActiveClass = 'popup_is-opened'
 
 // ИНИЦИАЛИЗАЦИЯ НАЧАЛЬНЫХ ЗНАЧЕНИЙ Cards
 const initialCards = [
@@ -68,9 +68,9 @@ function addTemplateCard(item) {
 // ИНИЦИЛИЗАЦИЯ CARDS
 initialCards.map(addTemplateCard);
 
-// СДЕЛАЕМ ИТЕРАЦИЮ ПО ВСЕМ ПОПАПАМ И ПОВЕСИМ ОПРЕДЕЛЕННЫЕ СОБЫТИЯ НА ЭЛЕМЕНТЫ
+// СДЕЛАЕМ ИТЕРАЦИЮ ПО ВСЕМ ПОПАПАМ И ПОВЕСИМ ОПРЕДЕЛЕННЫЕ СОБЫТИЯ НА ЕЛЕМЕНТЫ
 popups.forEach(popup => {
-//ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
+  //ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
   const btnClose = popup.querySelector('.popup__close-button');
   btnClose.addEventListener('click', () => hidePopup(popup))
 })
@@ -145,7 +145,7 @@ function addCard(event) {
   const cardName = event.target.querySelector('#typePlace').value;
   const cardLink = event.target.querySelector('#typeUrl').value;
   const newCard = createCard({name: cardName, link: cardLink});
-  popupAddCard.classList.remove(popupActiveClass)
+  popupAddCard.classList.remove(popupActiveClass);
   cardsHtml.prepend(newCard);
   event.target.reset();
   toggleModal(popupAddCard);
