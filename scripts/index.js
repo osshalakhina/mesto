@@ -1,7 +1,7 @@
 //НАЙДЕМ ВСЕ ПОПАПЫ НА СТРАНИЦЕ
 
 const popups = document.querySelectorAll('.popup')
-const openPopupButtons = document.querySelectorAll('.popup__open');
+const openPopupButtons = document.querySelectorAll('.popup-open');
 const popupEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupAddCard = document.querySelector('.popup_type_add-card');
 const profileName = document.querySelector('.profile__name');
