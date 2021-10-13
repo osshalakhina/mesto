@@ -145,6 +145,7 @@ function addCard(event) {
   const cardName = event.target.querySelector('#typePlace').value;
   const cardLink = event.target.querySelector('#typeUrl').value;
   const newCard = createCard({name: cardName, link: cardLink});
+  popupAddCard.classList.remove(popupActiveClass)
   cardsHtml.prepend(newCard);
   event.target.reset();
   toggleModal(popupAddCard);
