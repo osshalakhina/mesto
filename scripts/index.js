@@ -71,35 +71,9 @@ function createCard(data) {
   return newCard;
 }
 
-// ДОБАВЛЕНИЕ CARD
-function addTemplateCard(data) {
-  const cardClone = createCard(data)
-  initialCardsElements.prepend(cardClone);
-}  
-
-function addCard(event) {
-  event.preventDefault();
-  const cardName = event.target.querySelector('#typePlace').value;
-  const cardLink = event.target.querySelector('#typeUrl').value;
-  const newCard = createCard({name: cardName, link: cardLink});
-  popupAddCard.classList.remove(popupActiveClass);
-  cardsHtml.prepend(newCard);
-  event.target.reset();
-}
-
-// ИНИЦИЛИЗАЦИЯ CARDS
-initialCards.map(addTemplateCard);
-
-// СДЕЛАЕМ ИТЕРАЦИЮ ПО ВСЕМ ПОПАПАМ И ПОВЕСИМ ОПРЕДЕЛЕННЫЕ СОБЫТИЯ НА ЕЛЕМЕНТЫ
-popups.forEach(popup => {
-//ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
-  const btnClose = popup.querySelector('.popup__close-button');
-  btnClose.addEventListener('click', () => hidePopup(popup))
-})
-
 //ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
 function hidePopup(/** HTMLElement*/ popup) {
-  popup.classList.remove(popupActiveClass);
+  popupAddCard.classList.remove(popupActiveClass);
 }
 
 openPopupButtons.forEach(button => {
@@ -123,25 +97,41 @@ function showPopup(event) {
   } else return; 
 } 
 
+// ДОБАВЛЕНИЕ CARD
+function addTemplateCard(data) {
+  const cardClone = createCard(data)
+  initialCardsElements.prepend(cardClone);
+}  
+
+function addCard(event) {
+  event.preventDefault();
+  const cardName = event.target.querySelector('#typePlace').value;
+  const cardLink = event.target.querySelector('#typeUrl').value;
+  const newCard = createCard({name: cardName, link: cardLink});
+  cardsHtml.prepend(newCard);
+  event.target.reset();  
+  hidePopup(event);
+}
+
+// ИНИЦИЛИЗАЦИЯ CARDS
+initialCards.map(addTemplateCard);
+
+// СДЕЛАЕМ ИТЕРАЦИЮ ПО ВСЕМ ПОПАПАМ И ПОВЕСИМ ОПРЕДЕЛЕННЫЕ СОБЫТИЯ НА ЕЛЕМЕНТЫ
+popups.forEach(popup => {
+//ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
+  const btnClose = popup.querySelector('.popup__close-button');
+  btnClose.addEventListener('click', () => hidePopup(popup))
+})
+
 // TOGGLE ПОПАП ПРОФИЛЯ
 function togglePopup() {
+
   if (!popupEditProfile.classList.contains(popupActiveClass)) {
     profileName.textContent = profileNameInput.value;
     profileJob.textContent = profileJobInput.value;
   }
-  popupEditProfile.classList.toggle('popup_is-opened');
+  popupEditProfile.classList.toggle(popupActiveClass);
 }
-
-function openProfilePopup() {
-document.querySelector('.profile__edit-button').addEventListener('click', togglePopup);
-showPopup(event);
-}
-//открывается попап 
-
-function closeProfilePopup() {
-document.querySelector('.popup__close-button').addEventListener('click', togglePopup);
-} 
-//закрывается попап
 
 // функция открытия фотографии для просмотра
 function openPopupImg(event) {
@@ -169,8 +159,3 @@ function activeLikeBtn(event) {
   const btn = event.target
   btn.classList.toggle('place__like-button_active');
 }
-
-
-
-
-
