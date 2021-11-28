@@ -74,6 +74,7 @@ function createCard(data) {
 //ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
 function hidePopup(/** HTMLElement*/ popup) {
   popupAddCard.classList.remove(popupActiveClass);
+  popup.classList.remove(popupActiveClass);
 }
 
 openPopupButtons.forEach(button => {
@@ -145,7 +146,7 @@ form.addEventListener('submit', function (event) {
   event.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileJob.textContent = profileJobInput.value;
-  togglePopup(event);
+  togglePopup();
 });
 
 //УДАЛЕНИЕ КАРТОЧКИ
