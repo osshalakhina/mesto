@@ -71,7 +71,7 @@ function createCard(data) {
   return newCard;
 }
 
-//ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
+// ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
 function hidePopup(/** HTMLElement*/ popup) {
   popupAddCard.classList.remove(popupActiveClass);
   popup.classList.remove(popupActiveClass);
@@ -119,22 +119,23 @@ initialCards.map(addTemplateCard);
 
 // СДЕЛАЕМ ИТЕРАЦИЮ ПО ВСЕМ ПОПАПАМ И ПОВЕСИМ ОПРЕДЕЛЕННЫЕ СОБЫТИЯ НА ЕЛЕМЕНТЫ
 popups.forEach(popup => {
-//ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
+// ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
   const btnClose = popup.querySelector('.popup__close-button');
   btnClose.addEventListener('click', () => hidePopup(popup))
 })
 
-// TOGGLE ПОПАП ПРОФИЛЯ
-function togglePopup() {
+// ФУНКЦИЯ ОТКРЫТИЯ ПОПАПА ПРОФИЛЯ
+function openProfilePopup() {
+  profileName.textContent = profileNameInput.value;
+  profileJob.textContent = profileJobInput.value;
+}
 
-  if (!popupEditProfile.classList.contains(popupActiveClass)) {
-    profileName.textContent = profileNameInput.value;
-    profileJob.textContent = profileJobInput.value;
-  }
+// ФУНКЦИЯ ЗАКРЫТИЯ ПОПАПА ПРОФИЛЯ
+function closeProfilePopup() {
   popupEditProfile.classList.toggle(popupActiveClass);
 }
 
-// функция открытия фотографии для просмотра
+// ФУНКЦИЯ ОТКРЫТИЯ ФОТОГРАФИИ ДЛЯ ПРОСМОТРА
 function openPopupImg(event) {
   const elImg = imgPopup.querySelector('img');
   elImg.src = event.target.src;
@@ -144,13 +145,11 @@ function openPopupImg(event) {
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  profileName.textContent = profileNameInput.value;
-  profileJob.textContent = profileJobInput.value;
-  togglePopup();
+  openProfilePopup();
+  closeProfilePopup();
 });
 
-//УДАЛЕНИЕ КАРТОЧКИ
-
+// УДАЛЕНИЕ КАРТОЧКИ
 function deleteCard(event) {
   const card = event.target.closest('.place');
   card.remove();
