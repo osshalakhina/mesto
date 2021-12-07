@@ -76,13 +76,13 @@ function hidePopup(/** HTMLElement*/ popup) {
   popup.classList.remove(popupActiveClass);
 }
 
+function hidePopupCard(/** HTMLElement*/ popupCard) {
+  popupAddCard.classList.remove(popupActiveClass); 
+}
+
 openPopupButtons.forEach(button => {
   button.addEventListener('click', showPopup);
 })
-
-function showPopup(/** HTMLElement*/ popup) {
-  popup.classList.add(popupActiveClass);
-}
 
 function showPopup(popup) {
   const el = popup.target; 
@@ -110,7 +110,7 @@ function addCard(popup) {
   const newCard = createCard({name: cardName, link: cardLink});
   cardsHtml.prepend(newCard);
   popup.target.reset();  
-  hidePopup(popup);
+  hidePopupCard(popup);
 }
 
 // ИНИЦИЛИЗАЦИЯ CARDS
@@ -120,7 +120,9 @@ initialCards.map(addTemplateCard);
 popups.forEach(popup => {
 // ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
   const btnClose = popup.querySelector('.popup__close-button');
+  btnClose.addEventListener('click', () => hidePopupCard(popup))
   btnClose.addEventListener('click', () => hidePopup(popup))
+  
 })
 
 // ФУНКЦИЯ ОТКРЫТИЯ ПОПАПА ПРОФИЛЯ
@@ -140,6 +142,7 @@ function openPopupImg(popup) {
 form.addEventListener('submit', function (popup) {
   popup.preventDefault();
   fillProfileInputs();
+  hidePopupCard(popupEditProfile);
   hidePopup(popupEditProfile);
 });
 
