@@ -1,7 +1,6 @@
 //НАЙДЕМ ВСЕ ПОПАПЫ НА СТРАНИЦЕ
 
 const popups = document.querySelectorAll('.popup')
-const openPopupButtons = document.querySelectorAll('.popup-open');
 const popupEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupAddCard = document.querySelector('.popup_type_add-card');
 const profileName = document.querySelector('.profile__name');
@@ -47,22 +46,16 @@ function hidePopup(/** HTMLElement*/ popup) {
   popup.classList.remove(popupActiveClass);
 }
 
-openPopupButtons.forEach(button => {
-  button.addEventListener('click', showPopup);
-})
+const addCardButton = document.querySelector('.profile__add-button');
+const editButton = document.querySelector('.profile__edit-button');
+const imgButton = document.querySelector('.place__image');
 
-function showPopup(popup) {
-  const el = popup.target; 
+addCardButton.addEventListener('click', () => showPopup(popupAddCard));
+editButton.addEventListener('click', () => showPopup(popupEditProfile));
 
-  if (el.classList.contains('profile__add-button')) {
-    popupAddCard.classList.add(popupActiveClass); 
-  } else if (el.classList.contains('profile__edit-button')) { 
-    popupEditProfile.classList.add(popupActiveClass); 
-  } else if (el.classList.contains('place__image')){ 
-    imgPopup.classList.add(popupActiveClass);
-    titlePopup.textContent = popup.currentTarget.alt;
-  } else return; 
-} 
+function showPopup(/** HTMLElement*/ popup) {
+   popup.classList.add(popupActiveClass);
+  }
 
 // ДОБАВЛЕНИЕ CARD
 function addTemplateCard(data) {
@@ -100,8 +93,8 @@ function fillProfileInputs() {
 function openPopupImg(popup) {
   const elImg = imgPopup.querySelector('img');
   elImg.src = popup.target.src;
-  elImg.alt = popup.currentTarget.alt;
-  showPopup(popup);
+  titlePopup.textContent = popup.currentTarget.alt;
+  showPopup(imgPopup);
 }
 
 form.addEventListener('submit', function (event) {
