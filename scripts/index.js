@@ -51,11 +51,6 @@ openPopupButtons.forEach(button => {
   button.addEventListener('click', showPopup);
 })
 
-function showPopup(/** HTMLElement*/ popup) {
-  popup.classList.add(popupActiveClass);
-}
-
-
 function showPopup(popup) {
   const el = popup.target; 
 
