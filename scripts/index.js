@@ -48,7 +48,7 @@ function fillProfileInputs() {
   profileJob.textContent = profileJobInput.value;
 }
 
-function profileInputs() {
+function fillProfile() {
   profileNameInput.value = profileName.textContent;
   profileJobInput.value = profileJob.textContent;
   showPopup(popupEditProfile);
@@ -68,7 +68,7 @@ const editButton = document.querySelector('.profile__edit-button');
 const imgButton = document.querySelector('.place__image');
 
 addCardButton.addEventListener('click', () => showPopup(popupAddCard));
-editButton.addEventListener('click', profileInputs);
+editButton.addEventListener('click', fillProfile);
 
 // ДОБАВЛЕНИЕ CARD
 function addTemplateCard(data) {
