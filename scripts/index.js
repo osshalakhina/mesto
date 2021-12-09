@@ -45,6 +45,7 @@ function createCard(data) {
 function fillProfileInputs() {
   profileName.textContent = profileNameInput.value;
   profileJob.textContent = profileJobInput.value;
+  showPopup(popupEditProfile);
 }
 
 // ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
@@ -61,7 +62,7 @@ const editButton = document.querySelector('.profile__edit-button');
 const imgButton = document.querySelector('.place__image');
 
 addCardButton.addEventListener('click', () => showPopup(popupAddCard));
-editButton.addEventListener('click', () => showPopup(popupEditProfile, fillProfileInputs));
+editButton.addEventListener('click', fillProfileInputs);
 
 // ДОБАВЛЕНИЕ CARD
 function addTemplateCard(data) {
