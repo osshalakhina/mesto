@@ -41,21 +41,27 @@ function createCard(data) {
   return newCard;
 }
 
+// ФУНКЦИЯ ОТКРЫТИЯ ПОПАПА ПРОФИЛЯ
+function fillProfileInputs() {
+  profileName.textContent = profileNameInput.value;
+  profileJob.textContent = profileJobInput.value;
+}
+
 // ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
 function hidePopup(/** HTMLElement*/ popup) {
   popup.classList.remove(popupActiveClass);
 }
+
+function showPopup(/** HTMLElement*/ popup) {
+   popup.classList.add(popupActiveClass);
+  }
 
 const addCardButton = document.querySelector('.profile__add-button');
 const editButton = document.querySelector('.profile__edit-button');
 const imgButton = document.querySelector('.place__image');
 
 addCardButton.addEventListener('click', () => showPopup(popupAddCard));
-editButton.addEventListener('click', () => showPopup(popupEditProfile));
-
-function showPopup(/** HTMLElement*/ popup) {
-   popup.classList.add(popupActiveClass);
-  }
+editButton.addEventListener('click', () => showPopup(popupEditProfile, fillProfileInputs));
 
 // ДОБАВЛЕНИЕ CARD
 function addTemplateCard(data) {
@@ -82,12 +88,6 @@ popups.forEach(popup => {
   btnClose.addEventListener('click', () => hidePopup(popup))
   
 })
-
-// ФУНКЦИЯ ОТКРЫТИЯ ПОПАПА ПРОФИЛЯ
-function fillProfileInputs() {
-  profileName.textContent = profileNameInput.value;
-  profileJob.textContent = profileJobInput.value;
-}
 
 // ФУНКЦИЯ ОТКРЫТИЯ ФОТОГРАФИИ ДЛЯ ПРОСМОТРА
 function openPopupImg(popup) {
