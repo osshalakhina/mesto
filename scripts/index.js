@@ -42,9 +42,15 @@ function createCard(data) {
 }
 
 // ФУНКЦИЯ ОТКРЫТИЯ ПОПАПА ПРОФИЛЯ
+
 function fillProfileInputs() {
   profileName.textContent = profileNameInput.value;
   profileJob.textContent = profileJobInput.value;
+}
+
+function profileInputs() {
+  profileNameInput.value = profileName.textContent;
+  profileJobInput.value = profileJob.textContent;
   showPopup(popupEditProfile);
 }
 
@@ -62,7 +68,7 @@ const editButton = document.querySelector('.profile__edit-button');
 const imgButton = document.querySelector('.place__image');
 
 addCardButton.addEventListener('click', () => showPopup(popupAddCard));
-editButton.addEventListener('click', fillProfileInputs);
+editButton.addEventListener('click', profileInputs);
 
 // ДОБАВЛЕНИЕ CARD
 function addTemplateCard(data) {
