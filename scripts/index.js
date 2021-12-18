@@ -120,3 +120,19 @@ function activeLikeBtn(event) {
   const btn = event.target
   btn.classList.toggle('place__like-button_active');
 }
+
+// ЗАКРЫТИЕ ПОПАПА КЛИКОМ НА ОВЕРЛЕЙ
+//функция для открытия и закрытия popups проходит по всем попапам, вешает обработчик событий
+// на клик и в условиях идентифицирует элемент, по которому кликнули
+popups.forEach((popup) => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains(popupActiveClass)) { //находит класс открытого оверлея попапа
+      hidePopup(popup);
+    }
+    if (evt.target.classList.contains(popupActiveClass)) { //находит класс кнопки с крестиком
+      hidePopup(popup);      
+    }
+  });
+});
+
+
