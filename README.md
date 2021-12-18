@@ -1,5 +1,5 @@
 ------
-# Проект 4: Место (спринт 4-5)
+# Проект 4: Место (спринт 4-6)
 
 ### О проекте:
 
@@ -25,6 +25,14 @@ JavaScript:
 * удаление карточек
 * попап просмотра картинки из карточки
 
+### Спринт 6, реализовано:
+
+JavaScript:
+* Валидация формы «Редактировать профиль»
+* Валидация формы «Новое место»
+* Закрытие попапа кликом на оверлей
+* Закрытие попапа нажатием на Esc
+
 ### Технологии: 
 
 * HTML
@@ -38,6 +46,7 @@ JavaScript:
 
 * [Макет для спринта 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 * [Макет для спринта 5](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
+* [Макет для спринта 6](https://www.figma.com/file/kRVLKwYG3d1HGLvh7JFWRT/JavaScript.-Sprint-6?node-id=1124%3A73)
 
 Оптимизация картинок выполнена через [https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
 
@@ -76,6 +85,14 @@ JavaScript:
 * remove cards
 * popup for viewing pictures in big size from the card
 
+### Sprint 6, implemented:
+
+JavaScript:
+* Validation of the "Edit Profile" form
+* Validation of the "New location" form
+* Close the popup by clicking on the overlay
+* Close the popup by pressing Esc
+
 ### Tehnology: 
 
 * HTML
@@ -89,6 +106,7 @@ JavaScript:
 
 * [For sprint 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 * [For sprint 5](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
+* [For sprint 6](https://www.figma.com/file/kRVLKwYG3d1HGLvh7JFWRT/JavaScript.-Sprint-6?node-id=1124%3A73)
 
 Optimization of images was done through [https://tinypng.com/](https://tinypng.com/).
 
