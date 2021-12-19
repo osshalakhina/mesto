@@ -1,10 +1,9 @@
 .popup__input_error {
-    color: #FF0000;
-    top: calc(100% + 3px);
-    left: 0;
-    opacity: 0;
-    font-style: normal;
-    font-weight: normal;
+    border-bottom-color: red;
+}
+
+span.popup__input_error {
+    color: red;
     font-size: 12px;
-    line-height: 15px;
+
 }
