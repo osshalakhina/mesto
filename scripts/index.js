@@ -54,22 +54,6 @@ function fillProfile() {
   showPopup(popupEditProfile);
 }
 
-// ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
-function hidePopup(/** HTMLElement*/ popup) {
-  popup.classList.remove(popupActiveClass);
-}
-
-function showPopup(/** HTMLElement*/ popup) {
-   popup.classList.add(popupActiveClass);
-  }
-
-const addCardButton = document.querySelector('.profile__add-button');
-const editButton = document.querySelector('.profile__edit-button');
-const imgButton = document.querySelector('.place__image');
-
-addCardButton.addEventListener('click', () => showPopup(popupAddCard));
-editButton.addEventListener('click', fillProfile);
-
 // ДОБАВЛЕНИЕ CARD
 function addTemplateCard(data) {
   const cardClone = createCard(data)
@@ -93,8 +77,33 @@ popups.forEach(popup => {
 // ДЛЯ КНОПКИ ЗАКРЫТЬ ДОБАВИМ КЛАСС hidePopup
   const btnClose = popup.querySelector('.popup__close-button');
   btnClose.addEventListener('click', () => hidePopup(popup))
-  
 })
+
+// ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
+function showPopup(/** HTMLElement*/ popup) {
+   popup.classList.add(popupActiveClass);
+   document.addEventListener('keydown', closeByEsc);
+  }
+
+  function hidePopup(/** HTMLElement*/ popup) {
+    popup.classList.remove(popupActiveClass);
+    document.removeEventListener('keydown', closeByEsc);
+  }
+
+const addCardButton = document.querySelector('.profile__add-button');
+const editButton = document.querySelector('.profile__edit-button');
+const imgButton = document.querySelector('.place__image');
+
+addCardButton.addEventListener('click', () => showPopup(popupAddCard));
+editButton.addEventListener('click', fillProfile);
+
+// ЗАКРЫТИЕ ПОПАПА НАЖАТИЕМ НА ESC
+function closeByEsc(event) {
+  if (event.key === "Escape") {
+    const popupOpened = document.querySelector('.popup_is-opened');
+    hidePopup(popupOpened);
+  }
+}
 
 // ФУНКЦИЯ ОТКРЫТИЯ ФОТОГРАФИИ ДЛЯ ПРОСМОТРА
 function openPopupImg(popup) {
@@ -120,3 +129,21 @@ function activeLikeBtn(event) {
   const btn = event.target
   btn.classList.toggle('place__like-button_active');
 }
+
+// ЗАКРЫТИЕ ПОПАПА КЛИКОМ НА ОВЕРЛЕЙ
+//функция для открытия и закрытия popups проходит по всем попапам, вешает обработчик событий
+// на клик и в условиях идентифицирует элемент, по которому кликнули
+popups.forEach((popup) => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains(popupActiveClass)) { //находит класс открытого оверлея попапа
+      hidePopup(popup);
+    }
+    if (evt.target.classList.contains(popupActiveClass)) { //находит класс кнопки с крестиком
+      hidePopup(popup);      
+    }
+  });
+});
+
+
+
+
