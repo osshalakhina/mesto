@@ -1,8 +1,8 @@
-.popup__input_error {
+.popup__input-error {
     border-bottom-color: red;
 }
 
-span.popup__input_error {
+span.popup__input-error {
     color: red;
     font-size: 12px;
 
