@@ -1,5 +1,4 @@
 //НАЙДЕМ ВСЕ ПОПАПЫ НА СТРАНИЦЕ
-
 const popups = document.querySelectorAll('.popup')
 const popupEditProfile = document.querySelector('.popup_type_edit-profile');
 const popupAddCard = document.querySelector('.popup_type_add-card');
@@ -19,7 +18,10 @@ const popupActiveClass = 'popup_is-opened';
 function addCardListeners(card) {
   card.querySelector('.place__like-button').addEventListener('click', activeLikeBtn);
   card.querySelector('.place__delete-button').addEventListener('click', deleteCard);
-  card.querySelector('.place__image').addEventListener('click', openPopupImg);
+  //card.querySelector('.place__image').addEventListener('click', openPopupImg);
+  card.querySelector('.place__image').addEventListener("click", () => {
+   openPopupCardShow(card);
+}); 
 }
 
 const formAddNewCard = popupAddCard.querySelector('.popup__form');
@@ -40,7 +42,6 @@ function createCard(data) {
 }
 
 // ФУНКЦИЯ ОТКРЫТИЯ ПОПАПА ПРОФИЛЯ
-
 function fillProfile() {
   profileName.textContent = profileNameInput.value;
   profileJob.textContent = profileJobInput.value;
@@ -104,12 +105,21 @@ function closeByEsc(event) {
 }
 
 // ФУНКЦИЯ ОТКРЫТИЯ ФОТОГРАФИИ ДЛЯ ПРОСМОТРА
-function openPopupImg(popup) {
-  const elImg = imgPopup.querySelector('img');
-  elImg.src = popup.target.src;
-  titlePopup.textContent = popup.currentTarget.alt;
+
+//Как было и работало:
+//function openPopupImg(popup) { 
+//  const elImg = imgPopup.querySelector('img'); 
+//  elImg.src = popup.target.src; 
+//  titlePopup.textContent = popup.currentTarget.alt; 
+//  showPopup(imgPopup); 
+//} 
+
+function openPopupCardShow (card) {
+  imgPopup.src = card.link;
+  imgPopup.alt = card.name;
+  titlePopup.textContent = card.name;
   showPopup(imgPopup);
-}
+}; 
 
 profileForm.addEventListener('submit', function (event) {
   event.preventDefault();
