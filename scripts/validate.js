@@ -31,9 +31,14 @@ const hideInputError = (formElement, inputElement, inputErrorClass, errorClass) 
 
 //НЕАКТИВНАЯ КНОПКА
 const toggleButtonState = (formElement, buttonElement, inactiveButtonClass) => {
-  const isFormValid = formElement.checkValidity();
+  const isFormValid = formElement && formElement.checkValidity();
   buttonElement.classList.toggle(inactiveButtonClass, !isFormValid)
   buttonElement.disabled = !isFormValid;
+}
+
+//reset btn valid
+function removeButtonState(buttonElement, inactiveButtonClass) {
+  toggleButtonState(false, buttonElement, inactiveButtonClass)
 }
 
 //КАСТОМНАЯ ВАЛИДАЦИЯ
@@ -44,9 +49,15 @@ const setEventListeners = (formElement, {
   inputErrorClass,
   errorClass
 }) => { //функция валидации
-  formElement.addEventListener('submit', e => e.preventDefault());
   const inputList = Array.from(formElement.querySelectorAll(inputSelector));
   const buttonElement = formElement.querySelector(submitButtonSelector);
+  
+  formElement.addEventListener('submit', e => {
+    e.preventDefault();
+    removeButtonState(buttonElement, inactiveButtonClass)
+  });
+  
+  
   toggleButtonState(formElement, buttonElement, inactiveButtonClass);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
