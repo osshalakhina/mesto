@@ -15,13 +15,12 @@ const templateCard = document.querySelector('.template-card');
 const popupActiveClass = 'popup_is-opened';
 
 // ИНИЦИЛИЗАЦИЯ LISTENERS ДЛЯ CARD
-function addCardListeners(card) {
+function addCardListeners(card, cardData) {
   card.querySelector('.place__like-button').addEventListener('click', activeLikeBtn);
   card.querySelector('.place__delete-button').addEventListener('click', deleteCard);
-  //card.querySelector('.place__image').addEventListener('click', openPopupImg);
   card.querySelector('.place__image').addEventListener("click", () => {
-   openPopupCardShow(card);
-}); 
+    openPopupCardShow(card, cardData);
+  });
 }
 
 const formAddNewCard = popupAddCard.querySelector('.popup__form');
@@ -37,7 +36,8 @@ function createCard(data) {
   elementImage.alt = data.name;
   
   newCard.querySelector('.place__text').textContent = data.name;
-  addCardListeners(newCard);
+  
+  addCardListeners(newCard, data);
   return newCard;
 }
 
@@ -57,14 +57,14 @@ function fillProfileInputs() {
 function addTemplateCard(data) {
   const cardClone = createCard(data)
   cardsContainer.prepend(cardClone);
-}  
+}
 
 function addCard(event) {
   event.preventDefault();
   const cardName = event.target.querySelector('#typePlace').value;
   const cardLink = event.target.querySelector('#typeUrl').value;
-  addTemplateCard({name: cardName, link: cardLink}); 
-  event.target.reset();  
+  addTemplateCard({name: cardName, link: cardLink});
+  event.target.reset();
   hidePopup(popupAddCard);
 }
 
@@ -80,14 +80,14 @@ popups.forEach(popup => {
 
 // ФУНКЦИЯ ДЛЯ УДАЛЕНИЕ И ДОБАВЛЕНИЯ КЛАССА В ОТКРЫТЫХ ПОПАПАХ
 function showPopup(/** HTMLElement*/ popup) {
-   popup.classList.add(popupActiveClass);
-   document.addEventListener('keydown', closeByEsc);
-  }
+  popup.classList.add(popupActiveClass);
+  document.addEventListener('keydown', closeByEsc);
+}
 
-  function hidePopup(/** HTMLElement*/ popup) {
-    popup.classList.remove(popupActiveClass);
-    document.removeEventListener('keydown', closeByEsc);
-  }
+function hidePopup(/** HTMLElement*/ popup) {
+  popup.classList.remove(popupActiveClass);
+  document.removeEventListener('keydown', closeByEsc);
+}
 
 const addCardButton = document.querySelector('.profile__add-button');
 const editButton = document.querySelector('.profile__edit-button');
@@ -105,21 +105,14 @@ function closeByEsc(event) {
 }
 
 // ФУНКЦИЯ ОТКРЫТИЯ ФОТОГРАФИИ ДЛЯ ПРОСМОТРА
+const elImg = imgPopup.querySelector('img');
 
-//Как было и работало:
-//function openPopupImg(popup) { 
-//  const elImg = imgPopup.querySelector('img'); 
-//  elImg.src = popup.target.src; 
-//  titlePopup.textContent = popup.currentTarget.alt; 
-//  showPopup(imgPopup); 
-//} 
-
-function openPopupCardShow (card) {
-  imgPopup.src = card.link;
-  imgPopup.alt = card.name;
-  titlePopup.textContent = card.name;
+function openPopupCardShow(card, cardData) {
+  elImg.src = cardData.link;
+  elImg.alt = cardData.name;
+  titlePopup.textContent = cardData.name;
   showPopup(imgPopup);
-}; 
+};
 
 profileForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -147,12 +140,12 @@ popups.forEach((popup) => {
       hidePopup(popup);
     }
     if (evt.target.classList.contains(popupActiveClass) || evt.target.classList.contains(popupActiveClass)) {
-      hidePopup(popup);  
+      hidePopup(popup);
     }
   });
 });
 
 
- 
+
 
 

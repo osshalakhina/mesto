@@ -1,8 +1,10 @@
 .popup__input-container {
     margin-bottom: 30px;
+    position: relative;
 
 }
-.popup__input{
+
+.popup__input {
     font-size: 14px;
     line-height: 16.94px;
     border: none;
