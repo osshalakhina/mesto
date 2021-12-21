@@ -19,7 +19,7 @@ function addCardListeners(card, cardData) {
   card.querySelector('.place__like-button').addEventListener('click', activeLikeBtn);
   card.querySelector('.place__delete-button').addEventListener('click', deleteCard);
   card.querySelector('.place__image').addEventListener("click", () => {
-    openPopupCardShow(card, cardData);
+    openPopupCardShow(cardData);
   });
 }
 
@@ -107,7 +107,7 @@ function closeByEsc(event) {
 // ФУНКЦИЯ ОТКРЫТИЯ ФОТОГРАФИИ ДЛЯ ПРОСМОТРА
 const elImg = imgPopup.querySelector('img');
 
-function openPopupCardShow(card, cardData) {
+function openPopupCardShow(cardData) {
   elImg.src = cardData.link;
   elImg.alt = cardData.name;
   titlePopup.textContent = cardData.name;
@@ -134,18 +134,13 @@ function activeLikeBtn(event) {
 // ЗАКРЫТИЕ ПОПАПА КЛИКОМ НА ОВЕРЛЕЙ
 //функция для открытия и закрытия popups проходит по всем попапам, вешает обработчик событий
 // на клик и в условиях идентифицирует элемент, по которому кликнули
-popups.forEach((popup) => {
-  popup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains(popupActiveClass)) { //находит класс открытого оверлея попапа
-      hidePopup(popup);
-    }
-    if (evt.target.classList.contains(popupActiveClass) || evt.target.classList.contains(popupActiveClass)) {
-      hidePopup(popup);
-    }
-  });
-});
-
-
+popups.forEach((popup) => { 
+  popup.addEventListener('click', (evt) => { 
+    if (evt.target.classList.contains(popupActiveClass)) {
+        hidePopup(popup); 
+    } 
+  })
+}) 
 
 
 
