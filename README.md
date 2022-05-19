@@ -1,64 +1,4 @@
 ------
-# Проект 4: Место (спринт 4-6)
-
-### О проекте:
-
-Сервис Mesto: интерактивная страница, где можно обмениваться фотографиями и ставить лайки, изменять данные.
-
-### Спринт 4, реализовано:
-
-Вёрстка:
-* добавлен попап редактирования профиля
-* предусмотренно переполнение содержимого в блоке
-
-JavaScript:
-* реализованно открытие и закрытие попапа
-* поля формы заполненны значениями, которые отображаются на странице
-* реализованно редактирование имени и информации о себе
-
-### Спринт 5, реализовано:
-
-JavaScript:
-* отображение 6 карточек
-* реализованно открытие и закрытие попапов
-* добавление новой карточки через попап
-* удаление карточек
-* попап просмотра картинки из карточки
-
-### Спринт 6, реализовано:
-
-JavaScript:
-* Валидация формы «Редактировать профиль»
-* Валидация формы «Новое место»
-* Закрытие попапа кликом на оверлей
-* Закрытие попапа нажатием на Esc
-
-### Технологии: 
-
-* HTML
-* CSS
-* JavaScript
-* Методология BEM
-* Nested BEM
-* Git
-
-### Figma
-
-* [Макет для спринта 4](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
-* [Макет для спринта 5](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
-* [Макет для спринта 6](https://www.figma.com/file/kRVLKwYG3d1HGLvh7JFWRT/JavaScript.-Sprint-6?node-id=1124%3A73)
-
-Оптимизация картинок выполнена через [https://tinypng.com/](https://tinypng.com/), чтобы сайт загружался быстрее.
-
-Валидация кода [https://validator.w3.org/](https://validator.w3.org/).
-
-Конвертер цветов [https://colorscheme.ru](https://colorscheme.ru/color-converter.html)
-
-### Ссылка на проект: 
-
-[https://osshalakhina.github.io/mesto/](https://osshalakhina.github.io/mesto/)
-
-------
 # Project 4: Mesto (sprint 4-5)
 
 ### About project:
@@ -118,6 +58,15 @@ Color converter [https://colorscheme.ru](https://colorscheme.ru/color-converter.
 
 [https://osshalakhina.github.io/mesto/](https://osshalakhina.github.io/mesto/)
 
+# Preview
+
+* in general
+
+![](./images/Project_1.gif)
+
+* in different sizes
+
+![](./images/Project_2.gif)
 
 
 
